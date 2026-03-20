@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joyeux Anniversaire Mercedes Tenshi</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particules de fond -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Rubans décoratifs -->
+  <div class="ribbon ribbon-left"></div>
+  <div class="ribbon ribbon-right"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+
+    <div class="floating-icons">
+      <i class="fa-solid fa-star icon-float" style="--delay:0s; --x:10%; --y:15%"></i>
+      <i class="fa-solid fa-moon icon-float" style="--delay:0.5s; --x:85%; --y:20%"></i>
+      <i class="fa-solid fa-heart icon-float" style="--delay:1s; --x:5%; --y:70%"></i>
+      <i class="fa-solid fa-gem icon-float" style="--delay:1.5s; --x:90%; --y:65%"></i>
+      <i class="fa-solid fa-crown icon-float" style="--delay:2s; --x:50%; --y:5%"></i>
+      <i class="fa-solid fa-feather icon-float" style="--delay:2.5s; --x:20%; --y:85%"></i>
+      <i class="fa-solid fa-sparkles icon-float" style="--delay:3s; --x:75%; --y:80%"></i>
+      <i class="fa-solid fa-wand-magic-sparkles icon-float" style="--delay:0.8s; --x:35%; --y:90%"></i>
+    </div>
+
+    <div class="hero-content">
+      <div class="crown-wrap animate-drop">
+        <i class="fa-solid fa-crown crown-icon"></i>
+      </div>
+
+      <p class="subtitle-top animate-fade-up" style="--d:0.3s">Aujourd'hui, l'univers s'illumine pour</p>
+
+      <h1 class="main-name animate-fade-up" style="--d:0.6s">
+        <span class="name-line">Mercedes</span>
+        <span class="name-line name-tenshi">Tenshi</span>
+      </h1>
+
+      <div class="divider-ornament animate-fade-up" style="--d:0.9s">
+        <i class="fa-solid fa-circle-dot"></i>
+        <i class="fa-solid fa-star-of-life"></i>
+        <i class="fa-solid fa-circle-dot"></i>
+      </div>
+
+      <p class="hero-tagline animate-fade-up" style="--d:1.1s">
+        Joyeux Anniversaire
+      </p>
+
+      <div class="hero-badge animate-scale-in" style="--d:1.4s">
+        <i class="fa-solid fa-cake-candles"></i>
+        <span>Que cette journee soit aussi belle que toi</span>
+        <i class="fa-solid fa-cake-candles"></i>
+      </div>
+
+      <button class="scroll-btn animate-fade-up" style="--d:1.7s" onclick="scrollToMessage()">
+        <i class="fa-solid fa-angle-down"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- MESSAGE SECTION -->
+  <section class="message-section" id="message">
+    <div class="section-inner">
+
+      <div class="msg-deco-top">
+        <i class="fa-solid fa-feather-pointed"></i>
+      </div>
+
+      <h2 class="section-title reveal">Un message du coeur</h2>
+
+      <div class="letter-card reveal">
+        <div class="letter-header">
+          <i class="fa-regular fa-envelope-open"></i>
+        </div>
+        <p class="letter-text">
+          Chere Mercedes,
+        </p>
+        <p class="letter-text">
+          En ce jour tres special, je voulais prendre un moment pour te dire a quel point tu comptes.
+          Tu es une lumiere rare, une ame brillante qui illumine tout ce qui t'entoure.
+        </p>
+        <p class="letter-text">
+          Que cette nouvelle annee de vie t'apporte des joies infinies, des aventures inoubliables,
+          et tout le bonheur que tu merites — et tu en merites tellement.
+        </p>
+        <p class="letter-text letter-sign">
+          Avec tout mon amour,
+          <span><i class="fa-solid fa-heart"></i></span>
+        </p>
+      </div>
+
+      <div class="wishes-grid">
+        <div class="wish-card reveal">
+          <i class="fa-solid fa-sun wish-icon"></i>
+          <h3>Bonheur</h3>
+          <p>Que chaque matin te sourie et que chaque soir te comble de gratitude.</p>
+        </div>
+        <div class="wish-card reveal">
+          <i class="fa-solid fa-bolt wish-icon"></i>
+          <h3>Energie</h3>
+          <p>Que l'energie et la passion guident chacun de tes pas vers tes reves.</p>
+        </div>
+        <div class="wish-card reveal">
+          <i class="fa-solid fa-infinity wish-icon"></i>
+          <h3>Amour</h3>
+          <p>Que l'amour t'entoure, te soutienne et t'eleve vers les sommets.</p>
+        </div>
+        <div class="wish-card reveal">
+          <i class="fa-solid fa-mountain-sun wish-icon"></i>
+          <h3>Aventure</h3>
+          <p>Que chaque jour soit une nouvelle aventure pleine de surprises merveilleuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOUGIE INTERACTIVE -->
+  <section class="candle-section" id="candle">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Fais un voeu</h2>
+      <p class="candle-subtitle reveal">Clique sur la bougie pour souffler et realiser ton voeu</p>
+
+      <div class="candle-wrapper reveal" id="candleWrapper">
+        <div class="cake-base">
+          <div class="cake-layer cake-top"></div>
+          <div class="cake-layer cake-mid"></div>
+          <div class="cake-layer cake-bot"></div>
+          <div class="cake-decorations">
+            <span class="deco-dot"></span>
+            <span class="deco-dot"></span>
+            <span class="deco-dot"></span>
+            <span class="deco-dot"></span>
+            <span class="deco-dot"></span>
+          </div>
+        </div>
+        <div class="candle" id="candle">
+          <div class="candle-body">
+            <div class="candle-shine"></div>
+          </div>
+          <div class="candle-wick"></div>
+          <div class="flame-group" id="flameGroup">
+            <div class="flame flame-outer"></div>
+            <div class="flame flame-inner"></div>
+            <div class="flame flame-core"></div>
+            <div class="sparks">
+              <span class="spark"></span>
+              <span class="spark"></span>
+              <span class="spark"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wish-message" id="wishMessage">
+        <i class="fa-solid fa-star"></i>
+        <span>Ton voeu a ete envoy vers les etoiles !</span>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE DE SOUHAITS -->
+  <section class="stars-section" id="stars">
+    <div class="section-inner">
+      <h2 class="section-title reveal">Les etoiles te disent...</h2>
+
+      <div class="stars-track">
+        <div class="stars-inner" id="starsInner">
+          <!-- Generees dynamiquement par JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <i class="fa-solid fa-crown footer-icon"></i>
+      <p class="footer-name">Mercedes Tenshi</p>
+      <p class="footer-year">
+        <i class="fa-regular fa-copyright"></i>
+        <span id="year"></span> &mdash; Fait avec
+        <i class="fa-solid fa-heart footer-heart"></i>
+        pour toi
+      </p>
+    </div>
+    <div class="footer-stars">
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
